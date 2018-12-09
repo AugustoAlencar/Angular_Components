@@ -1,0 +1,19 @@
+@mixin background{
+    background: #117390;
+}
+  
+div{
+    footer{
+        bottom: 0;
+        width: 100%;
+        position: fixed;
+        font-size: .65rem;
+        text-align: center;
+        padding: 3px;
+        @include background();
+        span{
+            color: #FFFFFF;
+            
+        }
+    }
+}

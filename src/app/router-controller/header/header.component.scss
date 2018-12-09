@@ -1,0 +1,8 @@
+@mixin background-logo{
+  background: #117390;
+}
+
+div.header{
+  @include background-logo;
+  height: 15px;
+}
