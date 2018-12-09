@@ -15,9 +15,28 @@ import {
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) {
+    router.events.subscribe((event: RouterEvent) => {
+      this.navigationInterceptor(event);
+    });
+  }
 
   ngOnInit() {
+    /*
+      this.router.events.subscribe(event => {
+            this.rota = event; // pega valor apos o /#/
+            let rotaParse = this.rota.url.split('/');
+            routerConfig.map(i => {
+                if (this.validarRota == false) {
+                    if ((i['path'] === rotaParse[1])) {
+                        this.validarRota = true;
+                    }
+                }
+            })
+            this.validarDNS();
+            this.getMenu(1, this.menus);
+        });
+    */
   }
 
     navigationInterceptor(event: RouterEvent): void {
