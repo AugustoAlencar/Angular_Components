@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {
   Router,
-   Event as RouterEvent,
+  Event as RouterEvent,
   NavigationStart,
   NavigationEnd,
   NavigationCancel,
@@ -17,7 +17,8 @@ export class HeaderComponent implements OnInit {
 
   constructor(private router: Router) {
     router.events.subscribe((event: RouterEvent) => {
-      this.navigationInterceptor(event);
+      /* console.log(event) */
+       this.navigationInterceptor(event);
     });
   }
 
@@ -39,17 +40,25 @@ export class HeaderComponent implements OnInit {
     */
   }
 
-    navigationInterceptor(event: RouterEvent): void {
+  navigate(){
+    this.router.navigate(['/scroll'])
+  }
+
+  navigationInterceptor(event: RouterEvent): void {
     if (event instanceof NavigationStart) {
+      console.log("teste1", event)
       /* this.loading = true; */
     }
     if (event instanceof NavigationEnd) {
+      console.log("teste2", event)
       /* this.loading = false; */
     }
     if (event instanceof NavigationCancel) {
+      console.log("teste3", event)
       /* this.loading = false; */
     }
     if (event instanceof NavigationError) {
+      console.log("teste4", event)
       /* this.loading = false; */
     }
   }
