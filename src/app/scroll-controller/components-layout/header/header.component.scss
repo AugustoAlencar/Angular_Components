@@ -1,0 +1,45 @@
+@mixin flex-justify{
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.header{
+  background: #1d2331;
+  height: 150px;
+  .container-logo{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    .logo{
+      border: 1px solid #cccccc;
+      width: 170px;
+      height: 60px;
+      margin: 25px 0;
+      @include flex-justify();
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      p.text-logo{
+        color: #cccccc;
+      }
+    }
+  }
+  .container-itens-menu{
+    background: #161d27;
+    position: relative;
+    text-align: center;
+    .list{
+      li.itens{
+        display: inline-block;
+        color: #cccccc;
+        font-size: 14px;
+        list-style-type: none;
+        margin: 10px 15px;
+      }
+    }
+  }
+}

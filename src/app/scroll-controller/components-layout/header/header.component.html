@@ -1,3 +1,12 @@
-<p>
-  header works!
-</p>
+<header class="header">
+  <div class="container-logo">
+    <div class="logo">
+      <p class="text-logo">Testing Project</p>
+    </div>
+  </div>
+  <div class="container-itens-menu">
+    <ul class="list">
+      <li *ngFor="let item of list" class="itens">{{item}}</li>
+    </ul>
+  </div>
+</header>

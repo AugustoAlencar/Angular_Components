@@ -1,3 +1,24 @@
-<p>
-  list-of-content works!
-</p>
+<div class="animated FadeIn">
+  <div class="infopage">
+    <div class="caminho">
+      <p class="caminho-text bold">Testing Project/ Scroll</p>
+    </div>
+    <div class="info">
+      <p class="caminho-text">
+        Aqui a magica acontece e vc podera testar algumas funçoes de scroll
+      </p>
+    </div>
+  </div>
+
+  <div class="list-content">
+
+    <ul class="listagem">
+      <li *ngFor="let item of list"  class="conteudos">
+        <div class="container-itens">
+          <p class="text">{{item}}</p>
+        </div>
+      </li>
+    </ul>
+
+  </div>
+</div>

@@ -37,8 +37,45 @@
   overflow-x: hidden;
 
   .social{
+    @include flex-justify();
+    @include flex-align();
     background: #6451cf;
     height: 50px;
+    .container-social{
+      padding: 0 35px;
+      @include container();
+      .element{
+        display: inline-block;
+        float: left;
+        .group{
+          display: inline-block;
+          position: relative;
+          float: right;
+        }
+      }
+      p.text{
+        color: white;
+      }
+      .group-rede{
+        position: relative;
+        display: inline-block;
+        margin: 0 10px;
+        border-radius: 50%;
+        border: 1px solid white;
+        height: 25px;
+        width: 25px;
+        p.redesocial{
+          font-size: 12px;
+          position: absolute;
+          top: 1px;
+          left: 4px;
+          right: 4px;
+        }
+      }
+      .group-rede:last-child{
+        margin-right: 35px;
+      }
+    }
   }
 
   .links{

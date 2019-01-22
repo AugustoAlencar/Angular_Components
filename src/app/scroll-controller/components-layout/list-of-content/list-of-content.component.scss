@@ -1,0 +1,57 @@
+@mixin flex-justify{
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@mixin flex-align {
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.animated{
+  margin: 30px 0;
+  .infopage, .caminho, .info{
+    display: block;
+  }
+  .infopage{
+    padding: 0 50px;
+  }
+  .caminho{
+    .caminho-text{
+      font-size: 12px;
+      color: #0d5c73;
+    }
+  }
+  .info{
+    margin: 0 0 40px 0;
+    .caminho-text{
+      font-size: 15px;
+      color: #0d5c73;
+    }
+  }
+
+  .list-content{
+    .listagem{
+      .conteudos{
+        width: 100%;
+        @include flex-justify();
+        .container-itens{
+          height: 60px;
+          max-width: 380px;
+          width: 100%;
+          border: 1px solid #e4e3e3;
+          @include flex-justify();
+          @include flex-align();
+        }
+      }
+    }
+  }
+}
+
