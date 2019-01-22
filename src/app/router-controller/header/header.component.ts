@@ -38,10 +38,14 @@ export class HeaderComponent implements OnInit {
             this.getMenu(1, this.menus);
         });
     */
+    this.router.events.subscribe((event: RouterEvent) => {
+      /* console.log(event) */
+       this.navigationInterceptor(event);
+    });
   }
 
   navigate(){
-    this.router.navigate(['/scroll'])
+    this.router.navigate(['/router'])
   }
 
   navigationInterceptor(event: RouterEvent): void {

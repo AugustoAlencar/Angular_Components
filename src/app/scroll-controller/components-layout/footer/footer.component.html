@@ -1,3 +1,24 @@
-<p>
-  footer works!
-</p>
+<footer class="footer" id="footer">
+  <div class="row social">
+    <div class="container-social">
+
+    </div>
+  </div>
+  <div class="row links">
+    <div class="container-links">
+      <div *ngFor="let item of list" class="list">
+        <div class="title">
+          <a class="item-title">{{item.title}}</a>
+          <hr class="row-title">
+        </div>
+        <a *ngFor="let i of item.elements" class="itens">{{i}}</a>
+      </div>
+    </div>
+  </div>
+  <!--  d-flex justify-content-center align-items-center -->
+  <div class="row copyright">
+    <p class="info">
+      © 2018 Copyright: <span>Augusto Alencar</span>
+    </p>
+  </div>
+</footer>
