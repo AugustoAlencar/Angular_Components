@@ -15,11 +15,25 @@ export class ListOfContentComponent implements OnInit {
     'Conteudo clicavel numero 5',
     'Conteudo clicavel numero 6',
     'Conteudo clicavel numero 7',
+    'Conteudo clicavel numero 1',
+    'Conteudo clicavel numero 2',
+    'Conteudo clicavel numero 3',
+    'Conteudo clicavel numero 4',
+    'Conteudo clicavel numero 5',
+    'Conteudo clicavel numero 6',
+    'Conteudo clicavel numero 7',
   ]
 
   constructor() { }
 
   ngOnInit() {
+    console.log(document.getElementById("botao"));
+    console.log(document.getElementById("footer"));
+  }
+
+  public fixedElements(): void {
+    document.getElementById("botao").style.position = 'fixed';
+    document.getElementById("footer").style.position = 'fixed';
   }
 
 }

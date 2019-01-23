@@ -14,11 +14,17 @@
 
     <ul class="listagem">
       <li *ngFor="let item of list"  class="conteudos">
-        <div class="container-itens">
+        <div (click)="fixedElements()" class="container-itens">
           <p class="text">{{item}}</p>
         </div>
       </li>
     </ul>
+
+    <div class="container-botao" id="botao">
+      <div class="botao">
+        Click Aqui
+      </div>
+    </div>
 
   </div>
 </div>
