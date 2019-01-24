@@ -71,3 +71,23 @@ export class ListOfContentComponent implements OnInit {
   }
 
 }
+
+
+
+/*
+
+public fixedElements(event): void {
+    /* console.log(event)
+    console.log(document.documentElement.scrollTop) *
+
+    document.getElementById("botao").style.position = 'fixed';
+    document.getElementById("botao").style.bottom = '250px';
+    document.getElementById("botao").style.width = parseInt(window.getComputedStyle(document.getElementsByClassName("animated")[0], null).getPropertyValue('width')) + 'px';
+    document.getElementById("footer").style.width = parseInt(window.getComputedStyle(document.getElementsByClassName("animated")[0], null).getPropertyValue('width')) + 'px';
+    document.getElementById("footer").style.position = 'fixed';
+
+    console.log(document.getElementById(event).getBoundingClientRect().top)
+    document.documentElement.scrollTop = document.getElementById(event).getBoundingClientRect().top;
+  }
+
+*/
