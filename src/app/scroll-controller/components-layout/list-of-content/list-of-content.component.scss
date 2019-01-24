@@ -38,7 +38,10 @@
   }
 
   .list-content{
+    height: max-content;
     .listagem{
+      position: relative;
+      display: block;
       margin-bottom: 40px;
       .conteudos{
         width: 100%;
@@ -61,7 +64,14 @@
       }
     }
     .container-botao{
+      height: 50px;
       text-align: center;
+      background: white;
+
+      position: fixed;
+      bottom: 8px;
+      z-index: 2;
+
       .botao{
         width: 150px;
         display: inline-block;
@@ -69,6 +79,7 @@
         border-radius: 25px;
         background: #0e627b;
         color: #cccccc;
+
       }
     }
   }
