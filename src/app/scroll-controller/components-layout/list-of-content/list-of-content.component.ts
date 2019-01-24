@@ -66,6 +66,7 @@ export class ListOfContentComponent implements OnInit {
   } */
 
   public fixedElements(): void {
+    /* console.log(document.getElementById("botao").offsetTop) */
     document.getElementById("botao").style.position = 'fixed';
     document.getElementById("footer").style.position = 'fixed';
   }
