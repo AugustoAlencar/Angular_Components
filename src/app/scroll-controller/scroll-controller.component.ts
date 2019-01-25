@@ -20,16 +20,10 @@ export class ScrollControllerComponent implements OnInit {
   }
 
   private inicio(): void {
-    console.log('entrou')
-      let winScroll = document.body.scrollTop || document.documentElement.scrollTop; // pega a posição da janela com relação ao scroll
-      let height = document.documentElement.scrollHeight - document.documentElement.clientHeight; // pega a altura do doc e subtrai com o o tamanho da janela
-      let scrolled = (winScroll / height) * 100; // cria a porcentagem
-      document.getElementById("myBar").style.width = scrolled + "%"; // adiciona ao html um novo estilo css
-
       // função para controlar o botao "click aqui"
       let tamanhoLista = parseInt(window.getComputedStyle(document.getElementsByClassName("animated")[0], null).getPropertyValue("height"))
       let tamanhoContainerPai = parseInt(window.getComputedStyle(document.getElementsByClassName("animated")[0], null).getPropertyValue("width"));
-      /* console.log((document.documentElement.scrollTop + document.documentElement.clientHeight), tamanhoLista) */
+      console.log((document.documentElement.scrollTop + document.documentElement.clientHeight), tamanhoLista)
       if ((document.documentElement.scrollTop + document.documentElement.clientHeight) >= tamanhoLista) {
         console.log('entrou');
         (document.getElementById("botao").style.position = "fixed");
@@ -66,8 +60,8 @@ export class ScrollControllerComponent implements OnInit {
       // função para controlar o botao "click aqui"
       let tamanhoLista = parseInt(window.getComputedStyle(document.getElementsByClassName("animated")[0], null).getPropertyValue("height"))
       let tamanhoContainerPai = parseInt(window.getComputedStyle(document.getElementsByClassName("animated")[0], null).getPropertyValue("width"));
-      /* console.log((document.documentElement.scrollTop + document.documentElement.clientHeight), tamanhoLista) */
-      if ((document.documentElement.scrollTop + document.documentElement.clientHeight) >= tamanhoLista) {
+      console.log((document.documentElement.scrollTop + document.documentElement.clientHeight), tamanhoLista)
+      if ((document.documentElement.scrollTop + document.documentElement.clientHeight) >= (tamanhoLista + 300)) {
         console.log('entrou');
         (document.getElementById("botao").style.position = "relative");
         (document.getElementById("botao").style.width = tamanhoContainerPai + 'px');
