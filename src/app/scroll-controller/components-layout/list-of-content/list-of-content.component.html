@@ -13,8 +13,8 @@
   <div class="list-content">
 
     <ul class="listagem" id="listagem">
-      <li *ngFor="let item of list"  class="conteudos">
-        <div (click)="fixedElements()" class="container-itens">
+      <li *ngFor="let item of list; let i = index"  class="conteudos">
+        <div (click)="fixedElements(i)" id="{{i}}" class="container-itens">
           <p class="text">{{item}}</p>
         </div>
       </li>

@@ -65,22 +65,17 @@ export class ListOfContentComponent implements OnInit {
     }
   } */
 
-  public fixedElements(): void {
-    /* console.log(document.getElementById("botao").offsetTop) */
-    document.getElementById("botao").style.position = 'fixed';
-    document.getElementById("footer").style.position = 'fixed';
-  }
-
-}
-
+  /*  public fixedElements(): void {
+     /* console.log(document.getElementById("botao").offsetTop) *
+     document.getElementById("botao").style.position = 'fixed';
+     document.getElementById("footer").style.position = 'fixed';
+   }
+ */
 
 
-/*
-
-public fixedElements(event): void {
+  public fixedElements(event): void {
     /* console.log(event)
-    console.log(document.documentElement.scrollTop) *
-
+    console.log(document.documentElement.scrollTop) */
     document.getElementById("botao").style.position = 'fixed';
     document.getElementById("botao").style.bottom = '250px';
     document.getElementById("botao").style.width = parseInt(window.getComputedStyle(document.getElementsByClassName("animated")[0], null).getPropertyValue('width')) + 'px';
@@ -88,7 +83,8 @@ public fixedElements(event): void {
     document.getElementById("footer").style.position = 'fixed';
 
     console.log(document.getElementById(event).getBoundingClientRect().top)
-    document.documentElement.scrollTop = document.getElementById(event).getBoundingClientRect().top;
+    document.documentElement.scrollTop = 0; // para resetar o scroll;
+    document.documentElement.scrollTop = (document.documentElement.scrollTop + document.getElementById(event).getBoundingClientRect().top) - 100;
   }
+}
 
-*/

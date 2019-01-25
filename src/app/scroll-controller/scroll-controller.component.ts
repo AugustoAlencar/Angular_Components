@@ -60,7 +60,7 @@ export class ScrollControllerComponent implements OnInit {
       // função para controlar o botao "click aqui"
       let tamanhoLista = parseInt(window.getComputedStyle(document.getElementsByClassName("animated")[0], null).getPropertyValue("height"))
       let tamanhoContainerPai = parseInt(window.getComputedStyle(document.getElementsByClassName("animated")[0], null).getPropertyValue("width"));
-      console.log((document.documentElement.scrollTop + document.documentElement.clientHeight), tamanhoLista)
+      /* console.log((document.documentElement.scrollTop + document.documentElement.clientHeight), tamanhoLista) */
       if ((document.documentElement.scrollTop + document.documentElement.clientHeight) >= (tamanhoLista + 300)) {
         console.log('entrou');
         (document.getElementById("botao").style.position = "relative");
