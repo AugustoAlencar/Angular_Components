@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing';
 import { ScrollTestingModule } from './scroll-controller/scroll-controller.module';
-import { RouterControllerModule } from './router-controller/router-controller.module';
+import { DirectivesModule } from './directives/directives.module';
 
 @NgModule({
   declarations: [
@@ -14,6 +14,7 @@ import { RouterControllerModule } from './router-controller/router-controller.mo
     BrowserModule,
     AppRoutingModule,
     ScrollTestingModule,
+    DirectivesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
