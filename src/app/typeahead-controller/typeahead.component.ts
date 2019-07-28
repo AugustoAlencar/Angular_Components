@@ -10,7 +10,7 @@ import { EmiterService } from './services/emiter.service';
 export class TypeaheadComponent implements OnInit, OnDestroy {
 
   /** Decorator para o campo input de vaccinas - Passado para a diretiva de exibir e esconder a listagem de vacinas */
-  @ViewChild('inputVaccine') inputVaccine: ElementRef;
+  @ViewChild('inputAny') inputAny: ElementRef;
 
   /** Decorator para o box de vacinas */
   @ViewChild('boxList') boxList: ElementRef;

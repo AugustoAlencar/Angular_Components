@@ -220,8 +220,8 @@ input:disabled, .disabled {
 /* 
     ############### estrutura do input text #############
     <div class="grid-md-4 grid-lg-4 form-group-field">
-        <label class="form-group-field--label category-info" for="name-vaccine">Nome da vacina*</label>
-        <input class="form-group-field--input" type="text" id="name-vaccine" name="name-vaccine">
+        <label class="form-group-field--label category-info" for="name-Any">Nome da vacina*</label>
+        <input class="form-group-field--input" type="text" id="name-Any" name="name-Any">
     </div>
 
     ################# estrutura do input text area ############
@@ -232,7 +232,7 @@ input:disabled, .disabled {
 
     ############ estrutura para input radio ############
     <label class="m-t-20 form-group-field--label-check text-category-info">Sim
-        <input class="form-group-field--label-check--input" type="radio" checked="checked" name="vaccine">
+        <input class="form-group-field--label-check--input" type="radio" checked="checked" name="Any">
         <div class="form-group-field--label-check--circle">
             <span class="check"></span>
         </div>
@@ -240,7 +240,7 @@ input:disabled, .disabled {
 
     ############## estrutura para inputs text que possuem imagens dentro ##########
     <div class="form-group-field--group">
-        <input class="form-group-field--group__input" type="text" id="name-vaccine" name="name-vaccine">
+        <input class="form-group-field--group__input" type="text" id="name-Any" name="name-Any">
         <img src="../../assets/images/input/Cancelar.png" alt="">
     </div>
 

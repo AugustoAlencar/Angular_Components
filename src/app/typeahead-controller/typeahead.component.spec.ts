@@ -4,15 +4,15 @@ import { TypeaheadComponent } from './typeahead.component';
 import { EmiterService } from 'src/app/@core/services/general/emiter.service';
 import { FormsModule } from '@angular/forms';
 import { CoreModule } from 'src/app/@core/core.module';
-import { VaccineMilleniumModel } from 'src/app/@core/models/vaccines/vaccines.model';
+import { AnyAnyModel } from 'src/app/@core/models/Anys/Anys.model';
 import { KeyKode } from 'src/app/@core/enums/typeahead/keyCode.enum';
 
 describe('Componente Typeahead - input de seleção e busca', () => {
   let component: TypeaheadComponent;
   let fixture: ComponentFixture<TypeaheadComponent>;
 
-  let listVaccine: Array<VaccineMilleniumModel> = new Array<VaccineMilleniumModel>();
-  listVaccine = [
+  let listAny: Array<AnyAnyModel> = new Array<AnyAnyModel>();
+  listAny = [
     { id: 21676465, name: 'vacina hepatite B adulto' },
     { id: 21676520, name: 'vacina hepatite A pediátrica' }
   ]
@@ -45,7 +45,7 @@ describe('Componente Typeahead - input de seleção e busca', () => {
    */
   it('Validar Vacina invalida e nenhuma vacina encontrada', () => {
     component.searchValue = 'teste';
-    component.listElements = listVaccine;
+    component.listElements = listAny;
     component.requiredField = true;
     component.searchElement(component.searchValue, KeyKode.KeyEnter);
 
@@ -60,7 +60,7 @@ describe('Componente Typeahead - input de seleção e busca', () => {
    */
   it('Validar campo obrigatório', () => {
     component.searchValue = '';
-    component.listElements = listVaccine;
+    component.listElements = listAny;
     component.requiredField = true;
     component.searchElement(component.searchValue, KeyKode.KeyEnter);
 
@@ -74,7 +74,7 @@ describe('Componente Typeahead - input de seleção e busca', () => {
    */
   it('Validar elemento pesquisado, encontrado e selecionado', () => {
     component.searchValue = 'vacina hepatite B adulto';
-    component.listElements = listVaccine;
+    component.listElements = listAny;
     component.requiredField = true;
     component.searchElement(component.searchValue, KeyKode.KeyEnter);
 
@@ -91,7 +91,7 @@ describe('Componente Typeahead - input de seleção e busca', () => {
    */
   it('Validar elemento pesquisado, encontrado e selecionado com a tecla enter', () => {
     component.searchValue = 'vacina hepatite B adulto';
-    component.listElements = listVaccine;
+    component.listElements = listAny;
     component.requiredField = true;
     component.searchElement(component.searchValue, KeyKode.KeyEnter);
 

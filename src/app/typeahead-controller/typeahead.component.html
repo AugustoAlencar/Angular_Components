@@ -1,7 +1,7 @@
 <div (focusin)="showBox(true)" class="typeahead-container">
   <div class="form-group-field">
 
-    <input #inputVaccine typeahead-close [element]="inputVaccine" (showBox)="showBox($event)" 
+    <input #inputAny typeahead-close [element]="inputAny" (showBox)="showBox($event)" 
       typeahead-list [value]="searchValue" [listElement]="htmlList" [containerElements]="containerList"
       (returnElementSelected)="selectElementByEnter($event)"
       class="form-group-field--group__input typeahead" autocomplete="off" type="text" [id]="idInput" [name]="idInput"

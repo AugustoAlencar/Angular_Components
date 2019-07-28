@@ -1,9 +1,9 @@
 export enum TooltipEnum {
-    listVaccineTitleLength = 40,
-    listVaccineLength = 49,
+    listAnyTitleLength = 40,
+    listAnyLength = 49,
     listPathologyTitleLength = 40,
     listPathologyLength = 49,
-    detailsVaccine = 83,
+    detailsAny = 83,
     detailsPathology = 83,
 }
 
