@@ -9,11 +9,22 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
+import { SingleSelectModule } from '../single-select-controller/single-select.module';
+import { ThreeDotMenuModule } from '../three-dot-menu-controller/three-dot-menu.module';
+import { ToastModule } from '../toast-controller/toast.module';
+import { TooltipModule } from '../tooltip-controller/tooltip.module';
+import { TypeaheadModule } from '../typeahead-controller/typeahead.module';
+
 @NgModule({
   imports: [
     FormsModule,
     CommonModule,
-    RouterControllerRoutingModule
+    RouterControllerRoutingModule,
+    /* SingleSelectModule */
+    /* ThreeDotMenuModule */
+    /* ToastModule */
+    /* TooltipModule */
+    /* TypeaheadModule */
   ],
   declarations: [
     RouterControllerComponent,
@@ -21,7 +32,7 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent,
     FooterComponent
   ],
-  exports:[
+  exports: [
     RouterControllerComponent,
     HomeComponent,
     HeaderComponent,
